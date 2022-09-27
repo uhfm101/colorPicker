@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Welcome to my Color Picker
+  form(method = "POST" action = "/random")
+    button(type = "submit") Random
+  form(method="POST" action="/")
+    input(type = "color" name = "colorPicker" id ="picker" value = `${color}`)
+    br
+    label(for="picker") "Click Me"
+    br
+    input(type = "color" name = "textColorPicker" id = "textPicker" value = `${textColor}`)
+    br
+    label(for = "textPicker") Click Me
+    br
+    button(type="submit") Submit
